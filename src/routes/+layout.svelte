@@ -1,5 +1,6 @@
 <script lang="ts">
   import { theme } from '$lib/stores'
+ import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
 </script>
 
 <svelte:head>
@@ -8,6 +9,10 @@
 </svelte:head>
 
 <slot />
+
+<footer>
+  <ThemeSwitch/>
+</footer>
 
 <style>
  :root {
