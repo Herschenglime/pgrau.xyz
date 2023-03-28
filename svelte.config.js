@@ -17,7 +17,10 @@ const config = {
 	preprocess: [
 		sveltePreprocess(),
 		mdsvex({
-			extensions: ['.md'] //let mdsvex process md files
+			extensions: ['.md'], //let mdsvex process md files
+            // layout: {
+            //     journal: 'src/routes/e-portfolio/journal/post.svelte'
+            // }
 		})
 	]
 };
