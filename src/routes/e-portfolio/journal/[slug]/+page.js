@@ -1,15 +1,26 @@
-export async function load({ params }){
-  const post = await import(`../${params.slug}.md`)
-  console.log("this is the post")
-  console.log(post)
-  const { title, date } = post.metadata
+export async function load({ params }) {
+  try {
+    const post = await import(`../${params.slug}.md`)
+    const { title, date } = post.metadata
+    const content = post.default
 
-  // const { title, date } = { title: "test title", date: "today" }
-  const content = post.default
-
-  return {
-    content,
-    title,
-    date,
+    return {
+      content,
+      title,
+      date,
+    }
   }
+
+  catch (e) {
+    const post = await import(`../not-found.md`)
+    const { title, date } = post.metadata
+    const content = post.default
+
+    return {
+      content,
+      title,
+      date,
+    }
+  }
+
 }
