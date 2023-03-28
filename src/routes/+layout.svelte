@@ -2,7 +2,7 @@
   import { theme } from '$lib/stores'
  import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
  import Navbar from '$lib/components/Navbar.svelte'
- // import '$lib/styles/placeholder.css' - if I wanted to import, although inline seems fine
+ // import '$lib/styles/placeholder.scss' - if I wanted to import, although inline seems fine
 </script>
 
 <svelte:head>
