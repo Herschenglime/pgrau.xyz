@@ -1,6 +1,7 @@
 <script lang="ts">
   import { theme } from '$lib/stores'
  import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
+ import Navbar from '$lib/components/Navbar.svelte'
 </script>
 
 <svelte:head>
@@ -8,11 +9,11 @@
   $theme}/> <link rel="stylesheet" href={`/theme/${$theme}.css`} />
 </svelte:head>
 
-<slot />
+<header>
+  <Navbar/>
+</header>
 
-<footer>
-  <ThemeSwitch/>
-</footer>
+<slot />
 
 <style>
  :root {
