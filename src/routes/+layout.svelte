@@ -10,9 +10,7 @@
   $theme}/> <link rel="stylesheet" href={`/theme/${$theme}.css`} />
 </svelte:head>
 
-<header>
-  <Navbar/>
-</header>
+<Navbar/>
 
 <slot />
 
