@@ -2,7 +2,7 @@
   import { theme } from '$lib/stores'
  import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
  import Navbar from '$lib/components/Navbar.svelte'
- // import '$lib/styles/placeholder.scss' - if I wanted to import, although inline seems fine
+ import '$lib/styles/style.scss'
  import { fade } from 'svelte/transition'
 
  export let data
@@ -16,7 +16,7 @@
 <Navbar/>
 
 {#key data.currentRoute}
-  <main in:fade={{ duration: 150, delay: 150 }} out:fade={{ durtion: 150 }}>
+  <main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
     <slot/>
   </main>
 {/key}

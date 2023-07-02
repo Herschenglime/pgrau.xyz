@@ -2,6 +2,8 @@ import adapter from '@sveltejs/adapter-static';
 // import { vitePreprocess } from '@sveltejs/kit/vite';
 import sveltePreprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,9 +20,13 @@ const config = {
 		sveltePreprocess(),
 		mdsvex({
 			extensions: ['.md'], //let mdsvex process md files
-            // layout: {
-            //     journal: 'src/routes/e-portfolio/journal/post.svelte'
-            // }
+			rehypePlugins: [
+				rehypeSlug,
+				rehypeAutolinkHeadings,
+			]
+			// layout: {
+			//     journal: 'src/routes/e-portfolio/journal/post.svelte'
+			// }
 		})
 	]
 };
