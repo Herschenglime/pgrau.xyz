@@ -1,17 +1,11 @@
 <script lang="ts">
  import "../app.postcss"
- import { theme } from '$lib/stores'
  import Navbar from '$lib/components/Navbar.svelte'
  import '$lib/styles/style.scss'
  import { fade } from 'svelte/transition'
 
  export let data
 </script>
-
-<svelte:head>
-  <meta name="color-scheme" content={$theme == 'system' ? 'light dark' :
-  $theme}/> <link rel="stylesheet" href={`/theme/${$theme}.css`} />
-</svelte:head>
 
 <Navbar/>
 
