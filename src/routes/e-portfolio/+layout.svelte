@@ -1,12 +1,12 @@
 <script lang="ts">
  import SubNav from "$lib/components/SubNav.svelte";
+ const links:Link[] = [
+ {name: "Journal", path: "/e-portfolio/journal"},
+ ]
+ const title:Link = {name: "E-Portfolio", path: "/e-portfolio"}
+
 </script>
 
-<SubNav title="URSP E-Portfolio"/>
+<SubNav {title} {links}/>
 <slot />
 
-<style>
-  .navbar {
-    @apply min-h-0;
-  }
-</style>
