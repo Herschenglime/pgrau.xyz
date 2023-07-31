@@ -8,7 +8,7 @@
   <meta property="og:title" content={title} />
 </svelte:head>
 
-<article>
+<article class="prose">
   <h1>{ title }</h1>
   <p>Published: {date}</p>
   <Content/>

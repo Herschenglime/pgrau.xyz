@@ -8,16 +8,16 @@
   <title>pgrau.xyz</title>
 </svelte:head>
 
-<div class="prose">
-  <h1>About me</h1>
-
-
-  <h2>tailwind test</h2>
-
-  <h2>Cool Test Cards</h2>
-
-  {#each range as number}
-    <Card>Wow! Card #{number}!</Card>
-  {/each}
-
+<div class="hero min-h-screen">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Hello there</h1>
+      <p class="py-6">Welcome to my very cool website! Hit that button to scroll down slightly.</p>
+      <a href="#button-target"><button class="btn btn-primary">Get Started</button></a>
+    </div>
+  </div>
 </div>
+
+{#each range as number}
+  <p>num is {number}</p>
+{/each}

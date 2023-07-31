@@ -1,22 +1,23 @@
 <script lang="ts">
- import "../app.postcss"
- import Navbar from '$lib/components/Navbar.svelte'
- import '$lib/styles/style.scss'
- import { fade } from 'svelte/transition'
+  import '../app.postcss';
+  import Navbar from '$lib/components/Navbar.svelte';
+  import '$lib/styles/style.scss';
+  import { fade } from 'svelte/transition';
 
- export let data
+  export let data;
 </script>
 
-<Navbar/>
+<Navbar />
 
 {#key data.currentRoute}
-  <main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
-    <slot/>
+  <!-- <main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}> -->
+  <main class="relative">
+    <slot />
   </main>
 {/key}
 
 <style>
- :root {
-  font-family: sans-serif;
- }
+  :root {
+    /* font-family: sans-serif; */
+  }
 </style>
