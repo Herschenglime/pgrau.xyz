@@ -5,6 +5,7 @@
 
 <style>
 .card {
+  /* display: inline-flex; */
    border-radius: 10px;
    background: var(--color-light);
    padding: 5px;
