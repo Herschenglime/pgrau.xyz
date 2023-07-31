@@ -12,6 +12,8 @@
 <h1>About me</h1>
 
 
+<h2>tailwind test</h2>
+
 <h2>Cool Test Cards</h2>
 
 {#each range as number}

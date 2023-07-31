@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { theme } from '$lib/stores'
- import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
+ import "../app.postcss"
+ import { theme } from '$lib/stores'
  import Navbar from '$lib/components/Navbar.svelte'
  import '$lib/styles/style.scss'
  import { fade } from 'svelte/transition'

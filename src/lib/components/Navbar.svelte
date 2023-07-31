@@ -24,7 +24,7 @@
   </div>
 </nav>
 
-<style type="text/css" media="screen">
+<style>
   nav {
     width: 95vw;
     margin: auto;
