@@ -4,6 +4,6 @@
 
 <PageContent>
   <h1>What is URSP?</h1>
-<p>here's the <a href="/e-portfolio/journal">journal</a>.</p>
+<p>here's the <a href="/e-portfolio/journal" class="link">journal</a>.</p>
 </PageContent>
 

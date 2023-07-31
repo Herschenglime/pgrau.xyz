@@ -1,20 +1,17 @@
 <script lang="ts">
  export let data
+ import PageContent from "$lib/components/PageContent.svelte";
+ import EntryPreview from "$lib/components/journal/EntryPreview.svelte";
 </script>
 
-Look at all of these posts!
 
-<h1>Journal Entries</h1>
+<PageContent>
+  <h1 class="text-3xl">Journal Entries</h1>
 
-<ul>
-  {#each data.posts as post}
-	<li>
-      <h2>
-        <a href={post.path}>
-          {post.meta.title}
-        </a>
-      </h2>
-      Published {post.meta.date}
-    </li>
-  {/each}
-</ul>
+  <ul>
+    {#each data.posts as post}
+      <EntryPreview {post}/>
+    {/each}
+  </ul>
+
+</PageContent>
