@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { elasticOut } from 'svelte/easing';
 	import { scale, fade } from 'svelte/transition';
- import PageContent from '$lib/components/PageContent.svelte';
+  import PageContent from '$lib/components/PageContent.svelte';
+  import Body from './body.md'
 
 	let visible = false;
 
@@ -35,24 +36,24 @@ let unique = {}
   <title>pgrau.xyz</title>
 </svelte:head>
 
-<div class="hero">
+<div class="hero mb-10">
   {#key unique}
   <div class="hero-content text-center" in:spin={{duration : 4000}}
   out:scale>
     <div class="max-w-md">
-      <h1 class="text-5xl font-bold">Hello there</h1>
+      <h1 class="text-5xl font-bold">Hi! I'm Paul.</h1>
       <p class="py-6">Welcome to my website! Hit that button to see something cool.</p>
       <a href="#button-target"><button on:click={animate} class="btn btn-primary">click me!</button></a>
       <!-- todo: make silly image spin in from here: https://svelte.dev/tutorial/custom-css-transitions -->
     </div>
   </div>
   {/key}
-</div>
+  </div>
 
 {#if visible}
     <PageContent>
       <div class="prose" in:fade={{delay: 4000, duration: 800}}>
-        <h1>Incredible, right?</h1>
+        <Body/>
       </div>
     </PageContent>
 {/if}
