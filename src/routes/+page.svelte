@@ -1,24 +1,58 @@
 <script lang="ts">
- import Card from '$lib/components/Card.svelte'
+	import { elasticOut } from 'svelte/easing';
+	import { scale, fade } from 'svelte/transition';
+ import PageContent from '$lib/components/PageContent.svelte';
 
- const range = Array.from(Array(10).keys()).map(x => x+1)
+	let visible = false;
+
+	function spin(node, { duration }) {
+		return {
+			duration,
+			css: (t) => {
+				const eased = elasticOut(t);
+
+				return `
+					transform: scale(${eased}) rotate(${eased * 1080}deg);
+					color: hsl(
+						${Math.trunc(t * 360)},
+						${Math.min(100, 1000 - 1000 * t)}%,
+						${Math.min(50, 500 - 500 * t)}%
+					);`;
+			}
+		};
+	}
+
+//https://stackoverflow.com/questions/59062025/is-there-a-way-to-perform-svelte-transition-without-a-if-block
+let unique = {}
+
+ function animate() {
+   unique = {}
+   visible = true
+ }
 </script>
 
 <svelte:head>
   <title>pgrau.xyz</title>
 </svelte:head>
 
-<div class="hero min-h-screen">
-  <div class="hero-content text-center">
+<div class="hero">
+  {#key unique}
+  <div class="hero-content text-center" in:spin={{duration : 4000}}
+  out:scale>
     <div class="max-w-md">
       <h1 class="text-5xl font-bold">Hello there</h1>
-      <p class="py-6">Welcome to my very cool website! Hit that button to scroll down slightly.</p>
-      <a href="#button-target"><button class="btn btn-primary">Get Started</button></a>
+      <p class="py-6">Welcome to my website! Hit that button to see something cool.</p>
+      <a href="#button-target"><button on:click={animate} class="btn btn-primary">click me!</button></a>
       <!-- todo: make silly image spin in from here: https://svelte.dev/tutorial/custom-css-transitions -->
     </div>
   </div>
+  {/key}
 </div>
 
-{#each range as number}
-  <p>num is {number}</p>
-{/each}
+{#if visible}
+    <PageContent>
+      <div class="prose" in:fade={{delay: 4000, duration: 800}}>
+        <h1>Incredible, right?</h1>
+      </div>
+    </PageContent>
+{/if}
