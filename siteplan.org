@@ -1,0 +1,36 @@
+#+title: Siteplan
+
+* Home Page
+- Quick intro to who I am
+- links to other stuff in navbar
+- quote of the day or something, current project
+* Contact Page
+- if possible, a web form so my email can't get scraped
+- maybe linkedin
+- discord?
+* Blog/Projects
+- using same blog engine for eportfolio, writeups on stuff I've done/projects
+- site itself
+- hackathons
+
+* Config Section
+- overview of what my setup looks like and where to find dotfiles, highlights
+- could maybe hook into blog
+- different sections for main programs -
+  - linux environronment
+    - pop os
+    - regular gnome with paperwm, hot edge
+    - encryption scheme and filesystem layering
+  - doom emacs
+    - mention roam and how cool it is
+  - shell config method
+    - zim:fw with shell-fragment idea from zqs
+
+* Resume/Work Experience
+- where I've worked/ brief description of what I did
+- drop catch w/ cmake for class
+
+* Research E-portfolio
+- mention that it's for ursp, but otherwise make it stand on its own
+** Journal
+- have required prompts, same blog format

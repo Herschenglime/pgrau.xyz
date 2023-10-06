@@ -1,0 +1,9 @@
+#+title: Todo
+
+* Formatting
+- [ ] Make base container for most pages to go on so it looks ok
+- [ ] maybe look into other themes if they look nicer
+* Content
+- [ ] Implement stuff from site plan
+* Functionality
+- [ ] Perhaps set up contact form, demos like 2048
