@@ -1,4 +1,21 @@
+# running local dev environment with nix flake
+optional, but makes it so that dependencies don't have to be installed globally. Original template sourced from: <https://github.com/akirak/flake-templates>
+
+To run the dev environment with zsh, run: `nix develop --impure -c zsh` (based on [this answer](https://discourse.nixos.org/t/using-nix-develop-opens-bash-instead-of-zsh/25075/9))
+
+Note that you can also use direnv as specified here: <https://nixos.wiki/wiki/Development_environment_with_nix-shell#direnv>
+
+If set up, upon cloning the repo for the first time, run
+
+``` sh
+direnv allow .
+```
+
+`
+
 # create-svelte
+
+Note that now that bun exists, there's no reason to use npm anymore (to my very limited knowledge) - just replace every `npm` below with `bun` and it should work
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
