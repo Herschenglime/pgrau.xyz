@@ -23,6 +23,7 @@
 
               # You can choose pnpm, yarn, or none (npm).
               bun
+              unzip # needed for bun upgrade to work
 
               # note that vite is not in nixpkgs, so must still run bun install: https://github.com/NixOS/nixpkgs/issues/180966#issuecomment-1259584193
             ] ++ (with nodePackages; [
