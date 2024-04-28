@@ -1,3 +1,3 @@
-<div class="flex justify-center">
+<div class="flex items-center justify-center m-auto mt-4">
     <slot/>
 </div>
