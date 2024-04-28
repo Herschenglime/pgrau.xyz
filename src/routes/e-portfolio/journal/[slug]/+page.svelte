@@ -11,8 +11,8 @@
 
 <PageContent>
   <article class="prose">
-    <h1>{title}</h1>
-    <p>Published: {date}</p>
+    <h1 class="text-center mb-2">{title}</h1>
+    <h3 class="text-center mt-0">{date}</h3>
     <Content />
   </article>
 </PageContent>
