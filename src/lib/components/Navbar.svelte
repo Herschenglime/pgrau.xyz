@@ -3,7 +3,6 @@
   import { page } from '$app/stores';
 
   const links: Link[] = [
-    { name: 'Contact Me', path: '/contact' },
     { name: 'E-Portfolio', path: '/e-portfolio' }
   ];
 </script>
