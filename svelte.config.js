@@ -18,7 +18,6 @@ const config = {
 	extensions: ['.svelte', '.md'], //what files to treat as components
 
 	preprocess: [
-		sveltePreprocess(),
 		mdsvex({
 			extensions: ['.md'], //let mdsvex process md files
 			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]

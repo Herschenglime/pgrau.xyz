@@ -1,8 +1,6 @@
 <script lang="ts">
   import '../app.postcss';
   import Navbar from '$lib/components/Navbar.svelte';
-  import '$lib/styles/style.scss';
-  import { fade } from 'svelte/transition';
 
   export let data;
 </script>
@@ -15,9 +13,3 @@
     <slot />
   </main>
 {/key}
-
-<style>
-  :root {
-    /* font-family: sans-serif; */
-  }
-</style>
