@@ -5,6 +5,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { importAssets } from 'svelte-preprocess-import-assets'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,6 +19,7 @@ const config = {
 	extensions: ['.svelte', '.md'], //what files to treat as components
 
 	preprocess: [
+        importAssets(), //turn inline img paths to proper references
 		mdsvex({
 			extensions: ['.md'], //let mdsvex process md files
 			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
