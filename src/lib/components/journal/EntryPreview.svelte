@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let post;
+  export let post:Post;
 </script>
 
 <a href={post.path}>
