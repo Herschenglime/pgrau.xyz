@@ -12,7 +12,7 @@ Working under the Digital Worlds Institute and in partnership with the Universit
 
 <!-- https://research.dwi.ufl.edu/op.n/file/pd7py49630t41lba/ -->
 <ImageCard
-  title="UFLI Games"
-  alt="UFLI Games screenshot"
-  img='$lib/content/e-portfolio/research-experience/ufli-games.png'
-  />
+    title="UFLI Games"
+    alt="UFLI Games screenshot"
+    img='$lib/content/e-portfolio/research-experience/ufli-games.png'
+/>
