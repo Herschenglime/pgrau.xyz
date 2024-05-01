@@ -7,7 +7,7 @@
 <PageContent>
   <div class="flex-col items-center">
     <Prose>
-      <Content/>
+      <Content />
     </Prose>
   </div>
 </PageContent>

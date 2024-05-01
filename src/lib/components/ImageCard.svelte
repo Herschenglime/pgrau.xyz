@@ -1,12 +1,13 @@
 <script lang="ts">
  export let img:string
+ export let alt:string
  export let title:string
  export let buttonLabel:string = "visit"
 </script>
 
 <div class="card lg:card-side bg-base-100 shadow-xl">
   <figure>
-    <img src={img} alt="Album" />
+    <img src={img} {alt} />
   </figure>
   <div class="card-body">
     <h2 class="card-title">{title}</h2>
