@@ -1,14 +1,8 @@
 <script lang="ts">
 </script>
 
-<!-- prevent prose from messing up margins -->
-<slot />
-
-<style>
- /* https://stackoverflow.com/questions/46086483/how-to-apply-styles-to-slot-element-in-svelte
- / manually style child component's pre to have a max-height, can't be done with tailwind
- /*/
-    :global(pre[class*="language-"]) {
-        max-height: 40em;
-    }
-</style>
+<!-- "arbitrary variant" in tailwind to access child class
+     https://stackoverflow.com/questions/67119992/how-to-access-all-the-direct-children-of-a-div-in-tailwindcss -->
+<div class="[&>pre[class*='language-']]:max-h-[40em]">
+  <slot />
+</div>
