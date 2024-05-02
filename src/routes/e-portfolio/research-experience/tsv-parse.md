@@ -141,22 +141,3 @@ console.log(wordlists)
 // generate the JSON output file.
 let json = JSON.stringify(wordlists);
 fs.writeFileSync('../wordlists.json', json);
-
-//restructure to do this:
-/*
- * lesson[“18”].words
- * lesson[“18”].heart
- *
- * put class in js that loads json in and has getters for different things
- * can do sublists
- * make api for wordlist so that we can use it from other programs
- *
- *
- * what we need:
- * put categories back, make final json
- * need a simple set of getters through a light api
- *
- * am, an in 38a - fix up
- * also 41a, 49 - will need to change how I handle stuff
- */
-```
