@@ -1,5 +1,6 @@
 <script lang="ts">
   import ImageCard from '$lib/components/ImageCard.svelte';
+  import TsvParse from './tsv-parse.md';
 </script>
 
 # Research Experience
@@ -18,3 +19,13 @@ Working under the Digital Worlds Institute and in partnership with the Universit
 >
 Click the image to be taken to the site.
 </ImageCard>
+
+The project was entirely written in the **op.n** framework, a custom JavaScript-based web UI used for making apps for the Digital Worlds Institute and partner researchers.
+
+In particular, I focused on extracting the data from an existing excel sheet of all of the words in the curriculum into our program and making them accessible to the other games. I also made the "Select Words" GUI that lets teachers mix and match words from different lessons, as well as provide their own custom word lists.
+
+The code for extracting the word lists from the original excel sheet (downloaded as a .tsv file) and converting them to json is as follows:
+
+<div class="max-h-96 overflow:scroll"> 
+    <TsvParse/>
+</div>
