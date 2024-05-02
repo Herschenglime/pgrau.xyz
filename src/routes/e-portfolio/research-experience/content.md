@@ -28,3 +28,8 @@ In particular, I focused on extracting the data from an existing excel sheet of 
 The code for extracting the word lists from the original excel sheet (downloaded as a .tsv file) and converting them to json is as follows:
 
 <CodeSnip><TsvParse/></CodeSnip>
+
+To see the source code for any component on the website, including that of the Select Words interface, navigate to the Help > About > Software developers and click the "Source Code" button, like so:
+
+![Menu path]($lib/content/e-portfolio/research-experience/menu-path.png)
+![Source code button]($lib/content/e-portfolio/research-experience/source-code-view.png)
