@@ -1,5 +1,6 @@
 <script lang="ts">
   import ImageCard from '$lib/components/ImageCard.svelte';
+  import CodeSnip from '$lib/components/CodeSnip.svelte';
   import TsvParse from './tsv-parse.md';
 </script>
 
@@ -26,6 +27,4 @@ In particular, I focused on extracting the data from an existing excel sheet of 
 
 The code for extracting the word lists from the original excel sheet (downloaded as a .tsv file) and converting them to json is as follows:
 
-<div class="max-h-96 overflow:scroll"> 
-    <TsvParse/>
-</div>
+<CodeSnip><TsvParse/></CodeSnip>
