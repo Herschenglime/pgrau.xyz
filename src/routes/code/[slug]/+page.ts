@@ -9,7 +9,6 @@ export async function load({ params } : {metadata:any, default:any}) {
     post = await import(`../not-found.md`)
   }
 
-  console.log(post)
   const { title, date, hidden } = post.metadata
   const Content = post.default
 
