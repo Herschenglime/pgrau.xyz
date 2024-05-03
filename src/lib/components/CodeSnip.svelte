@@ -1,5 +1,6 @@
 <script lang="ts">
   export let title: string = 'Code Snippet';
+  export let name: string;
 </script>
 
 <!-- prevent prose from messing up card margins -->
@@ -9,7 +10,7 @@
       <h2 class="card-title">{title}</h2>
       <slot />
       <div class="card-actions justify-end">
-        <button class="btn btn-primary">Full Source</button>
+        <a href={`/code/${name}`}><button class="btn btn-primary">Full Source</button></a>
       </div>
     </div>
   </div>
