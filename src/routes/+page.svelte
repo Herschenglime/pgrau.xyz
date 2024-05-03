@@ -52,7 +52,7 @@ let unique = {}
 
 {#if visible}
     <PageContent>
-      <div class="prose" in:fade={{delay: 4000, duration: 800}}>
+      <div class="prose prose-lg" in:fade={{delay: 4000, duration: 800}}>
         <Body/>
       </div>
     </PageContent>
