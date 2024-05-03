@@ -17,7 +17,7 @@
     <input
       type="checkbox"
       class="theme-controller"
-      data-toggle-theme="dark,cupcake"
+      data-toggle-theme="dark,emerald"
       data-act-class="ACTIVECLASS"
     />
 
