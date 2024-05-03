@@ -47,6 +47,7 @@
   "type": "module",
   "dependencies": {
     "rehype-autolink-headings": "^6.1.1",
-    "rehype-slug": "^5.1.0"
+    "rehype-slug": "^5.1.0",
+    "theme-change": "^2.5.0"
   }
 }

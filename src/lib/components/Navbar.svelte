@@ -2,6 +2,8 @@
   //active link highlighting: https://www.okupter.com/blog/conditional-classes-in-svelte
   import { page } from '$app/stores';
 
+ import ThemeToggle from './ThemeToggle.svelte';
+
   const links: Link[] = [
     { name: 'E-Portfolio', path: '/e-portfolio' }
   ];
@@ -22,4 +24,5 @@
            <li> <a href="/e-portfolio">E-Portfolio</a> </li> -->
     </ul>
   </div>
+    <ThemeToggle/>
 </nav>
