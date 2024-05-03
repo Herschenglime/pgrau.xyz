@@ -3,7 +3,7 @@
 </script>
 
 <a href={post.path}>
-  <div class="card bg-neutral shadow-xl m-5">
+  <div class="card bg-base-200 shadow-xl m-5">
     <div class="card-body">
       <h2 class="card-title">{post.meta.title}</h2>
       <p>{post.meta.description}</p>
