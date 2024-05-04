@@ -43,7 +43,7 @@ let unique = {}
     <div class="max-w-md">
       <h1 class="text-5xl font-bold">Hi! I'm Paul.</h1>
       <p class="py-6">Welcome to my website! Hit that button to see something cool.</p>
-      <a href="#button-target"><button on:click={animate} class="btn btn-primary">click me!</button></a>
+      <button on:click={animate} class="btn btn-primary">click me!</button>
       <!-- todo: make silly image spin in from here: https://svelte.dev/tutorial/custom-css-transitions -->
     </div>
   </div>
