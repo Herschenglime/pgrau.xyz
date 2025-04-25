@@ -11,7 +11,6 @@ If set up, upon cloning the repo for the first time, run
 direnv allow .
 ```
 
-`
 
 # create-svelte
 
