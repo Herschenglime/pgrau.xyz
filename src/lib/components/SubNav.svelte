@@ -1,8 +1,12 @@
 <script lang="ts">
   import { page } from '$app/stores';
 
- export let title:String;
- export let links: Link[];
+  interface Props {
+    title: String;
+    links: Link[];
+  }
+
+  let { title, links }: Props = $props();
 </script>
 
 <div class="navbar bg-base-200 py-0">

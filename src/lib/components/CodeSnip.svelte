@@ -1,6 +1,11 @@
 <script lang="ts">
-  export let title: string = 'Code Snippet';
-  export let name: string;
+  interface Props {
+    title?: string;
+    name: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let { title = 'Code Snippet', name, children }: Props = $props();
 </script>
 
 <!-- prevent prose from messing up card margins -->
@@ -8,7 +13,7 @@
   <div class="card card-compact bg-base-200 shadow-xl">
     <div class="card-body">
       <h2 class="card-title">{title}</h2>
-      <slot />
+      {@render children?.()}
       <div class="card-actions justify-end">
         <a href={`/code/${name}`}><button class="btn btn-primary">Full Source</button></a>
       </div>

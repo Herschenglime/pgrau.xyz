@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
   import PageContent from '$lib/components/PageContent.svelte';
-  export let data;
+  let { data } = $props();
   const { title, date, Content } = data;
 </script>
 

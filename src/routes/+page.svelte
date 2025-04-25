@@ -4,7 +4,7 @@
   import PageContent from '$lib/components/PageContent.svelte';
   import Body from './body.md'
 
-	let visible = false;
+	let visible = $state(false);
 
 	function spin(node, { duration }) {
 		return {
@@ -24,7 +24,7 @@
 	}
 
 //https://stackoverflow.com/questions/59062025/is-there-a-way-to-perform-svelte-transition-without-a-if-block
-let unique = {}
+let unique = $state({})
 
  function animate() {
    unique = {}
@@ -43,7 +43,7 @@ let unique = {}
     <div class="max-w-md">
       <h1 class="text-5xl font-bold">Hi! I'm Paul.</h1>
       <p class="py-6">Welcome to my website! Hit that button to see something cool.</p>
-      <button on:click={animate} class="btn btn-primary">click me!</button>
+      <button onclick={animate} class="btn btn-primary">click me!</button>
       <!-- todo: make silly image spin in from here: https://svelte.dev/tutorial/custom-css-transitions -->
     </div>
   </div>

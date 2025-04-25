@@ -1,7 +1,7 @@
 <script lang="ts">
-  export let data;
   import PageContent from '$lib/components/PageContent.svelte';
   import EntryPreview from '$lib/components/journal/EntryPreview.svelte';
+  let { data } = $props();
 </script>
 
 <PageContent>

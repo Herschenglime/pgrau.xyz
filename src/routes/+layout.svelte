@@ -5,7 +5,7 @@
 
   import Navbar from '$lib/components/Navbar.svelte';
 
-  export let data;
+  let { data, children } = $props();
 </script>
 
 <Navbar />
@@ -13,6 +13,6 @@
 {#key data.currentRoute}
   <!-- <main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}> -->
   <main class="relative">
-    <slot />
+    {@render children?.()}
   </main>
 {/key}

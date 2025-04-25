@@ -1,7 +1,12 @@
 <script lang="ts">
- export let extraClasses = "";
+    interface Props {
+        extraClasses?: string;
+        children?: import('svelte').Snippet;
+    }
+
+    let { extraClasses = "", children }: Props = $props();
 </script>
 
 <article class={`prose prose-lg ${extraClasses}`}>
-    <slot/>
+    {@render children?.()}
 </article>
