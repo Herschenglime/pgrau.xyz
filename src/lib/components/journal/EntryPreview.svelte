@@ -1,5 +1,3 @@
-<!-- @migration-task Error while migrating Svelte code: `<a>` cannot be a descendant of `<a>`. The browser will 'repair' the HTML (by moving, removing, or inserting elements) which breaks Svelte's assumptions about the structure of your components.
-https://svelte.dev/e/node_invalid_placement -->
 <script lang="ts">
   export let post:Post;
 </script>

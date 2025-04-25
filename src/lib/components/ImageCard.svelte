@@ -1,21 +1,9 @@
 <script lang="ts">
-  interface Props {
-    link: string;
-    img: string;
-    alt: string;
-    title: string;
-    buttonLabel?: string;
-    children?: import('svelte').Snippet;
-  }
-
-  let {
-    link,
-    img,
-    alt,
-    title,
-    buttonLabel = 'visit',
-    children
-  }: Props = $props();
+  export let link: string;
+  export let img: string;
+  export let alt: string;
+  export let title: string;
+  export let buttonLabel: string = 'visit';
 </script>
 
 <!-- prevent prose from messing up margins -->
@@ -30,7 +18,7 @@
     <div class="card-body">
       <h2 class="card-title">{title}</h2>
       <p>
-        {@render children?.()}
+        <slot />
       </p>
     </div>
   </div>
