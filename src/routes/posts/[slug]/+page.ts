@@ -5,13 +5,12 @@ import type { EntryGenerator, PageLoad } from "./$types";
 export const prerender = "auto";
 
 const contentDir = "/src/lib/content/posts/";
+const modules = import.meta.glob("/src/lib/content/posts/*.md") as ContentModules;
 
 export const load = (async ({ params }) => {
-	const modules = import.meta.glob("/src/lib/content/posts/*.md") as ContentModules;
 	return loadContent(modules, contentDir, params.slug);
 }) satisfies PageLoad;
 
 export const entries: EntryGenerator = async () => {
-	const modules = import.meta.glob("/src/lib/content/posts/*.md") as ContentModules;
 	return getEntries(modules, contentDir);
 };
