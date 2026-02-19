@@ -1,5 +1,5 @@
-//import adapter from "@sveltejs/adapter-auto";
-import adapter from "@sveltejs/adapter-cloudflare";
+import adapter from "@sveltejs/adapter-auto";
+// import adapter from "@sveltejs/adapter-cloudflare";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { fromString as stringToHast } from "hast-util-from-string";
 import { toHtml as hastToHtml } from "hast-util-to-html";
