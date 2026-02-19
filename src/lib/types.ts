@@ -9,3 +9,8 @@ export type ContentModules = Record<
 	string,
 	() => Promise<{ default: Component; metadata: ContentMetadata }>
 >;
+
+export type PageContentData = {
+	component: Component;
+	metadata: ContentMetadata;
+};

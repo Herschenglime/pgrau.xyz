@@ -1,7 +1,12 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
+	import ContentPage from '$lib/components/ContentPage.svelte';
+	import type { PageData } from './$types';
 
-	export let data: PageData;
+	interface Props {
+		data: PageData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
-<svelte:component this={data.component} />
+<ContentPage {data} />
