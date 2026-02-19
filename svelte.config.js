@@ -72,9 +72,20 @@ export function rehypeMarkdownLinks() {
 					const srcext = node.properties.href?.toString().split(".").pop();
 
 					if (srcext === "md") {
-						node.properties.href = node.properties.href
-							.replace("/src/lib/content", "")
-							.replace(".md", "");
+						// Match paths like /src/lib/content/slug.md or /src/lib/content/projects/slug.md
+						const match = node.properties.href.match(
+							/\/src\/lib\/content\/(?:(projects|posts|)[/])?(.+)\.md/
+						);
+						if (match) {
+							const [, category, slug] = match;
+							if (category) {
+								// Path like /src/lib/content/projects/slug.md -> /projects/slug
+								node.properties.href = `/${category}/${slug}`;
+							} else {
+								// Path like /src/lib/content/slug.md -> /slug
+								node.properties.href = `/${slug}`;
+							}
+						}
 					}
 				}
 			}

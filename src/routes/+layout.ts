@@ -5,13 +5,13 @@ import type { LayoutLoad } from "./$types";
 export const prerender = "auto";
 
 export const load = (async () => {
-	const modules = import.meta.glob("/src/lib/content/*.md") as ContentModules;
+        const modules = import.meta.glob("/src/lib/content/*.md") as ContentModules;
 
-	let slugList = Object.keys(modules).map((path) => {
-		return { slug: pathToSlug(path) };
-	});
+        let slugList = Object.keys(modules).map((path) => {
+                return { slug: pathToSlug(path, "/src/lib/content/") };
+        });
 
-	slugList = slugList.sort((a, b) => a.slug.localeCompare(b.slug));
+        slugList = slugList.sort((a, b) => a.slug.localeCompare(b.slug));
 
-	return { slugList };
+        return { slugList };
 }) satisfies LayoutLoad;
