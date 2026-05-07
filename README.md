@@ -16,6 +16,10 @@ npx sv create my-app
 
 ## Developing
 
+### First Run setup
+Run `bun run prepare` after a reinstall, as without the generate .svelte-kit directory, vite will throw errors without being able to see the generated structure relating to the metadata tag.
+
+### Active Development
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
