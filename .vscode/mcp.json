@@ -1,8 +1,11 @@
 {
 	"servers": {
 		"svelte": {
-			"command": "npx",
-			"args": ["-y", "@sveltejs/mcp"]
+			"command": "bunx",
+			"args": ["-y", "@sveltejs/mcp"],
+			"env": {
+				"PATH": "/opt/homebrew/bin:${env:PATH}"
+			}
 		}
 	}
 }

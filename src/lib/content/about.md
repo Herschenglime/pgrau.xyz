@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: About Me
 description: How to get started using template-sveltekit-md-docs
 ---
 **template-sveltekit-md-docs** is designed to be a template for users to edit and adapt to their own use case.

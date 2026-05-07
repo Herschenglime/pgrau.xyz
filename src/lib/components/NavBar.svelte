@@ -7,10 +7,9 @@
 
   let { slugList = [] }: { slugList?: SlugItem[] } = $props();
 
-  const items = $derived([
-    { slug: '', label: 'Home' },
-    ...slugList.map((item) => ({ ...item, label: item.slug.replace(/-/g, ' ') }))
-  ]);
+  const items = $derived(
+    slugList.map((item) => ({ ...item, label: item.slug.replace(/-/g, ' ') }))
+  );
 </script>
 
 <div class="navbar bg-base-100 shadow-sm">
