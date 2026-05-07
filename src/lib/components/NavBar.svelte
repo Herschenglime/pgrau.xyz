@@ -7,8 +7,16 @@
 
   let { slugList = [] }: { slugList?: SlugItem[] } = $props();
 
+  const manualItems = [
+    { slug: 'projects', label: 'Projects' },
+    { slug: 'posts', label: 'Posts' },
+  ];
+
   const items = $derived(
-    slugList.map((item) => ({ ...item, label: item.slug.replace(/-/g, ' ') }))
+    [
+      ...manualItems,
+      ...slugList.map((item) => ({ ...item, label: item.slug.replace(/-/g, ' ') })),
+    ]
   );
 </script>
 
@@ -37,7 +45,7 @@
     <a class="btn btn-ghost text-xl" href="/">pgrau.xyz</a>
   </div>
 
-  <div class="navbar-center hidden lg:flex">
+  <div class="navbar-end hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       {#each items as item}
         <li>
