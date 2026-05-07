@@ -21,8 +21,23 @@
 			<div class="timeline-middle">
 				<div class="h-2.5 w-2.5 rounded-full bg-base-content/40"></div>
 			</div>
-			<div class="timeline-end timeline-box">
-				<a href={resolve(`${basePath}/${item.slug}` as `/${string}`)} class="hover:underline">{item.title}</a>
+			<div class="timeline-end w-full pl-6 md:pl-10">
+				<a
+					href={resolve(`${basePath}/${item.slug}` as `/${string}`)}
+					class="block w-full max-w-3xl transition-transform duration-200 hover:-translate-y-0.5"
+				>
+					<div class="card bg-base-200 shadow-sm hover:shadow-md">
+						{#if item.image}
+							<figure>
+								<img src={item.image} alt={item.title} class="h-full w-full object-cover" />
+							</figure>
+						{/if}
+						<div class="card-body">
+							<h2 class="card-title">{item.title}</h2>
+							<p>{item.description}</p>
+						</div>
+					</div>
+				</a>
 			</div>
 
 			{#if index < pages.length - 1}

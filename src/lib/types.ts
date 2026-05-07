@@ -4,6 +4,7 @@ export type ContentMetadata = {
 	title: string;
 	description: string;
 	date?: string;
+	image?: string;
 };
 
 export type ContentModules = Record<
@@ -19,6 +20,8 @@ export type PageContentData = {
 export type TimelinePage = {
 	slug: string;
 	title: string;
+	description: string;
+	image?: string;
 	dateText: string;
 	timestamp: number;
 };

@@ -74,12 +74,12 @@ export function parseDateLoose(dateValue?: string): Date | null {
 		return cleanedDate;
 	}
 
-	const ymd = cleaned.match(/^(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})$/);
+	const ymd = cleaned.match(/^(\d{4})[/-](\d{1,2})[/-](\d{1,2})$/);
 	if (ymd) {
 		return dateFromParts(ymd[1], ymd[2], ymd[3]);
 	}
 
-	const dmyOrMdy = cleaned.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})$/);
+	const dmyOrMdy = cleaned.match(/^(\d{1,2})[/-](\d{1,2})[/-](\d{2,4})$/);
 	if (dmyOrMdy) {
 		const [, first, second, yearRaw] = dmyOrMdy;
 		const year = yearRaw.length === 2 ? `20${yearRaw}` : yearRaw;
@@ -116,6 +116,8 @@ export async function getTimelinePages(modules: ContentModules, contentDir: stri
 			return {
 				slug,
 				title: metadata.title,
+				description: metadata.description,
+				image: metadata.image,
 				dateText: parsedDate
 					? parsedDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })
 					: metadata.date ?? "Unknown date",

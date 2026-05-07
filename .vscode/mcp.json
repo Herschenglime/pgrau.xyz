@@ -6,6 +6,14 @@
 			"env": {
 				"PATH": "/opt/homebrew/bin:${env:PATH}"
 			}
+		},
+		"context7": {
+			"type": "stdio",
+			"command": "bunx",
+			"args": ["-y", "@upstash/context7-mcp@latest"],
+			"env": {
+				"PATH": "/opt/homebrew/bin:${env:PATH}"
+			}
 		}
 	}
 }
