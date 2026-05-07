@@ -11,6 +11,8 @@
 </button>
 
 <style>
+	@reference "../../app.css";
+
 	/* I'm bad at css, I just let chatgpt make this */
 	button {
 		@apply relative inline-block px-8 py-3 font-bold text-white uppercase transition-all duration-200 transform rounded-lg shadow-lg hover:shadow-xl active:shadow-md;

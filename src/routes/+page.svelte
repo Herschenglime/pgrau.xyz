@@ -11,6 +11,8 @@
 	/>
 </svelte:head>
 
+<button class="btn">test button</button>
+
 <h1 class="my-4 text-4xl font-bold">{homeMetadata.title}</h1>
 <hr class="my-4 border" />
 
