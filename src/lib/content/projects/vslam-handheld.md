@@ -1,8 +1,8 @@
 ---
-title: VSLAM Handheld
-description: Handheld development platform to test and evaluate visual SLAM algorithms before integration on an underwater robot.
-context: UF · RoboPI Lab
-date: 2026-04-20
+title: Senior Thesis - Testing Education Analysis
+description: Analyzed student results on programming project over a 4-year span against varying levels of unit testing education. Working on a publication. 
+context: UF Employment · COP3530 Data Structures and Algorithms
+date: 2026-04-29
 ---
 
-Handheld development platform to test and evaluate visual SLAM algorithms before integration on an underwater robot.
+Analyzed student results on programming project over a 4-year span against varying levels of unit testing education. Working on a publication. 

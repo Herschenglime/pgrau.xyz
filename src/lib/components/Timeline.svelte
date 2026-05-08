@@ -17,11 +17,11 @@
 				<hr />
 			{/if}
 
-			<div class="timeline-start">{item.dateText}</div>
+			<div class="timeline-start text-sm opacity-70 md:text-end">{item.dateText}</div>
 			<div class="timeline-middle">
 				<div class="h-2.5 w-2.5 rounded-full bg-base-content/40"></div>
 			</div>
-			<div class="timeline-end w-full pl-6 md:pl-10">
+			<div class="timeline-end w-full pl-6 md:pl-10 mb-10 md:mb-12">
 				<a
 					href={resolve(`${basePath}/${item.slug}` as `/${string}`)}
 					class="block w-full max-w-3xl transition-transform duration-200 hover:-translate-y-0.5"
