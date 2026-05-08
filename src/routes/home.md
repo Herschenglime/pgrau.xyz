@@ -7,3 +7,9 @@ description: Personal website of Paul Grau Jr.
 Hi! I'm Paul, a recent B.S.E. in Computer Engineering graduate from the University of Florida.
 
 This site serves as an extended resume and blog of sorts, discussing the various [projects](./projects) I've gotten up to over the years, [posts](./posts) about individual observations or non-obvious things I've figured out and would like to share, and whatever else seems appropriate for the medium. Enjoy!
+
+Note that it is currently under active development and will be expanded over time. As such, please enjoy this y2k-era gif I found [here](http://www.textfiles.com/underconstruction/).
+
+<div align="center">
+  <img src="/under_construction.gif" alt="Under Construction Banner">
+</div>

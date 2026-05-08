@@ -117,6 +117,7 @@ export async function getTimelinePages(modules: ContentModules, contentDir: stri
 				slug,
 				title: metadata.title,
 				description: metadata.description,
+				context: metadata.context,
 				image: metadata.image,
 				dateText: parsedDate
 					? parsedDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })

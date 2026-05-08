@@ -3,6 +3,7 @@ import type { Component } from 'svelte';
 export type ContentMetadata = {
 	title: string;
 	description: string;
+	context?: string;
 	date?: string;
 	image?: string;
 };
@@ -21,6 +22,7 @@ export type TimelinePage = {
 	slug: string;
 	title: string;
 	description: string;
+	context?: string;
 	image?: string;
 	dateText: string;
 	timestamp: number;

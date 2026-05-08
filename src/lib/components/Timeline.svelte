@@ -33,6 +33,9 @@
 							</figure>
 						{/if}
 						<div class="card-body">
+							{#if item.context}
+								<div class="badge badge-outline badge-sm self-start">{item.context}</div>
+							{/if}
 							<h2 class="card-title">{item.title}</h2>
 							<p>{item.description}</p>
 						</div>

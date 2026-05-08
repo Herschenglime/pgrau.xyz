@@ -11,6 +11,6 @@
 	/>
 </svelte:head>
 
-<article class="prose">
+<article class="prose mx-auto">
 	<HomeMarkdown />
 </article>
